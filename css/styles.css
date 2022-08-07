@@ -8,6 +8,29 @@ body {
   font-family: var(--main-font);
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding-top: 50px;
+}
+
 /*------COMPONENTS------*/
 
 .font-style {
@@ -28,16 +51,49 @@ body {
   color: #2196f3;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.section {
+  margin: 0px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /*-----END COMPONENTS-----*/
 
 /*------HEADER-------*/
 
-.navigation-list {
-  list-style: none;
+.header .container {
+  display: flex;
+  height: 80px;
+  border-bottom: 1px solid #ECECEC;
 }
 
-.header a {
-  text-decoration: none;
+.logo-link {
+  margin-right: 93px;
+}
+
+.contact-header:not(:last-child) {
+  margin-left: auto;
+}
+
+.contact-header {
+  margin-right: 50px;
+}
+
+.navigation-list-item:not(:last-child) {
+  margin-right: 46px;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .navigation a {
@@ -54,6 +110,10 @@ body {
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: #757575;
+}
+
+.header a {
+  text-decoration: none;
 }
 
 .navigation-list-link:hover,
@@ -77,6 +137,8 @@ body {
   text-align: center;
   color: #ffffff;
   letter-spacing: 0.06em;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .main-header {
@@ -84,24 +146,40 @@ body {
   font-weight: 900;
   line-height: 1.364;
   text-transform: uppercase;
+  padding-bottom: 30px;
 }
 
 .hero-btn {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  display: flex;
+  display: flexbox;
   align-items: center;
   color: #ffffff;
-  background: #2196f3;
+  background: var(--main-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+  width: 200px;
+  padding: 10px 42px;
+  border: none;
 }
 
 /*------END HERO------*/
 
 /*----ABOUT----*/
+
+.about-list {
+  display: flex;
+}
+
+.about-list-item {
+  width: 270px;
+}
+
+.about-list-item:not(:last-child) {
+  margin-right: 30px;
+}
 
 .main-description {
   font-weight: 700;
@@ -117,11 +195,20 @@ body {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #757575;
+  padding-bottom: 94px;
 }
 
 /*----END ABOUT----*/
 
 /*-----WHAT DO WE DO-----*/
+
+.doing-list-item {
+  display: inline-block;
+}
+
+.doing-list-item:not(:last-child) {
+  padding-right: 30px;
+}
 
 .doing-list {
   list-style: none;
@@ -140,6 +227,14 @@ body {
 
 /*----OUR TEAM----*/
 
+.team-img {
+  display: inline-block;
+}
+
+.team-img:not(:last-child) {
+  padding-right: 30px;
+}
+
 .background-secondary {
   background-color: #f5f4fa;
 }
@@ -149,11 +244,18 @@ body {
   line-height: 1.188;
   text-align: center;
   letter-spacing: 0.03em;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .signature-name {
   font-weight: 500;
   color: #212121;
+  padding-bottom: 10px;
 }
 
 .signature-occupation {
@@ -163,6 +265,11 @@ body {
 /*----END OUR TEAM----*/
 
 /*----FOOTER----*/
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
 .footer a {
   text-decoration: none;
@@ -216,12 +323,25 @@ body {
   background: #f5f4fa;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
 }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background-color: var(--main-color);
   color: #ffffff;
+}
+
+.portfolio-nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-nav-item:not(:last-child) {
+  padding-right: 8px;
 }
 
 .portfolio-signature-name {
@@ -237,9 +357,26 @@ body {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: #757575;
+  padding-top: 4px;
 }
-.portfolio-nav-list {
-  list-style: none;
+
+
+.portfolio-img,
+.portfolio-img-second,
+.portfolio-img-third {
+  display: inline-block;
+}
+
+.portfolio-img:not(:last-child),
+.portfolio-img-second:not(:last-child),
+.portfolio-img-third:not(:last-child) {
+  padding-right: 30px;
+}
+
+.portfolio-signature {
+  padding: 20px 24px;
+  background: #FFFFFF;
+border: 1px solid #EEEEEE;
 }
 
 /*----END PORTFOLIO----*/

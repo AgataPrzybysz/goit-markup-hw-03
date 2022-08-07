@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./modern-normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -14,37 +15,43 @@
   </head>
   <body class="font-style">
     <header class="header">
-      <a class="logo-link" href="/"
-        >Web<span style="color: black">Studio</span></a
-      >
-      <nav class="navigation">
-        <ul class="navigation-list">
-          <li class="navigation-list-item">
-            <a class="navigation-list-link" href="#">Agencja</a>
-          </li>
-          <li class="navigation-list-item">
-            <a class="navigation-list-link" href="portfolio.html">Portfolio</a>
-          </li>
-          <li class="navigation-list-item">
-            <a class="navigation-list-link" href="#">Kontakt</a>
-          </li>
-        </ul>
-      </nav>
-      <a class="contact-header" href="mailto:info@devstudio.com"
-        >info@devstudio.com</a
-      >
-      <a class="contact-header" href="tel:48111111111">+48 111 111 111</a>
+      <div class="container">
+        <a class="logo-link" href="/"
+          >Web<span style="color: black">Studio</span></a
+        >
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-list-item">
+              <a class="navigation-list-link" href="#">Agencja</a>
+            </li>
+            <li class="navigation-list-item">
+              <a class="navigation-list-link" href="portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="navigation-list-item">
+              <a class="navigation-list-link" href="#">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="contact-header" href="mailto:info@devstudio.com"
+          >info@devstudio.com</a
+        >
+        <a class="contact-header" href="tel:48111111111">+48 111 111 111</a>
+      </div>
     </header>
     <main>
       <!--HERO-->
       <section class="background hero">
-        <h1 class="main-header">
-          EFEKTYWNE ROZWIĄZANIA <br />DLA WASZEGO BIZNESU
-        </h1>
-        <button class="hero-btn" type="button">Zamów usługe</button>
+        <div class="container">
+          <h1 class="main-header">
+            EFEKTYWNE ROZWIĄZANIA <br />DLA WASZEGO BIZNESU
+          </h1>
+          <button class="hero-btn" type="button">Zamów usługe</button>
+        </div>
       </section>
-      <section>
-        <div class="about">
+      <section class="section">
+        <div class="about container">
           <ul class="about-list">
             <li class="about-list-item">
               <p class="main-description">LOREM IPSUM</p>
@@ -77,7 +84,7 @@
           </ul>
         </div>
         <!--WHAT DO WE DO-->
-        <div class="doing">
+        <div class="doing container">
           <h2 class="doing-title">Czym się zajmujemy</h2>
           <ul class="doing-list">
             <li class="doing-list-item">
@@ -108,9 +115,11 @@
         </div>
       </section>
       <!--OUR TEAM-->
-      <section class="background-secondary">
-        <h2 class="doing-title">Nasz zespół</h2>
-        <div class="team">
+      <section class="background-secondary section">
+        <div class="container">
+          <h2 class="doing-title">Nasz zespół</h2>
+        </div>
+        <div class="team container">
           <figure class="team-img">
             <img
               src="./images/section3/nasz_zespół_img4.jpg"
@@ -164,24 +173,30 @@
     </main>
     <!--FOOTER-->
     <footer class="background footer">
-      <a class="logo-link" href="/"
-        >Web<span style="color: white">Studio</span></a
-      >
-      <address class="address">
-        <ul class="address-list">
-          <li class="address-footer">
-            <a href="https://goo.gl/maps/EamJw36GoYy7MoUs6" target="_blank"
-              >m. Warszawa, Aleje Jerozolimskie 21</a
-            >
-          </li>
-          <li class="contact-footer">
-            <a class="contact-footer-link" href="mailto:info@example.com">info@example.com</a>
-          </li>
-          <li class="contact-footer">
-            <a class="contact-footer-link" href="tel:+48111111111">+48 111 111 111</a>
-          </li>
-        </ul>
-      </address>
+      <div class="container">
+        <a class="logo-link" href="/"
+          >Web<span style="color: white">Studio</span></a
+        >
+        <address class="address">
+          <ul class="address-list">
+            <li class="address-footer">
+              <a href="https://goo.gl/maps/EamJw36GoYy7MoUs6" target="_blank"
+                >m. Warszawa, Aleje Jerozolimskie 21</a
+              >
+            </li>
+            <li class="contact-footer">
+              <a class="contact-footer-link" href="mailto:info@example.com"
+                >info@example.com</a
+              >
+            </li>
+            <li class="contact-footer">
+              <a class="contact-footer-link" href="tel:+48111111111"
+                >+48 111 111 111</a
+              >
+            </li>
+          </ul>
+        </address>
+      </div>
     </footer>
   </body>
 </html>
