@@ -6,6 +6,7 @@
 
 body {
   font-family: var(--main-font);
+  font-family: "Roboto", "Raleway", sans-serif;
 }
 
 h1,
@@ -24,17 +25,9 @@ p {
   padding: 0;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  padding-top: 50px;
-}
-
 /*------COMPONENTS------*/
 
 .font-style {
-  font-family: "Roboto", sans-serif, "Raleway", sans-serif;
   text-decoration: none;
 }
 
@@ -52,9 +45,10 @@ img {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   align-items: center;
+  padding: 0 15px;
 }
 
 .section {
@@ -63,13 +57,16 @@ img {
   padding-bottom: 94px;
 }
 
+.image {
+  display: block;
+}
+
 /*-----END COMPONENTS-----*/
 
 /*------HEADER-------*/
 
 .header .container {
   display: flex;
-  height: 80px;
   border-bottom: 1px solid #ECECEC;
 }
 
@@ -129,10 +126,6 @@ img {
 
 /*------HERO------*/
 
-.about-list {
-  list-style: none;
-}
-
 .hero {
   text-align: center;
   color: #ffffff;
@@ -153,7 +146,7 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  display: flexbox;
+  display: flex;
   align-items: center;
   color: #ffffff;
   background: var(--main-color);
@@ -163,6 +156,7 @@ img {
   width: 200px;
   padding: 10px 42px;
   border: none;
+  margin: 0 auto;
 }
 
 /*------END HERO------*/
@@ -171,14 +165,8 @@ img {
 
 .about-list {
   display: flex;
-}
-
-.about-list-item {
-  width: 270px;
-}
-
-.about-list-item:not(:last-child) {
-  margin-right: 30px;
+  gap: 30px;
+  list-style: none;
 }
 
 .main-description {
@@ -202,16 +190,11 @@ img {
 
 /*-----WHAT DO WE DO-----*/
 
-.doing-list-item {
-  display: inline-block;
-}
-
-.doing-list-item:not(:last-child) {
-  padding-right: 30px;
-}
-
 .doing-list {
   list-style: none;
+  padding-top: 50px;
+  display: flex;
+  gap: 30px;
 }
 
 .doing-title {
@@ -227,12 +210,10 @@ img {
 
 /*----OUR TEAM----*/
 
-.team-img {
-  display: inline-block;
-}
-
-.team-img:not(:last-child) {
-  padding-right: 30px;
+.team {
+  display: flex;
+  gap: 30px;
+  padding-top: 50px;
 }
 
 .background-secondary {
@@ -360,23 +341,18 @@ img {
   padding-top: 4px;
 }
 
-
-.portfolio-img,
-.portfolio-img-second,
-.portfolio-img-third {
-  display: inline-block;
-}
-
-.portfolio-img:not(:last-child),
-.portfolio-img-second:not(:last-child),
-.portfolio-img-third:not(:last-child) {
-  padding-right: 30px;
+.portfolio-description,
+.portfolio-description-second,
+.portfolio-description-third {
+  display: flex;
+  gap: 30px;
+  padding-top: 50px;
 }
 
 .portfolio-signature {
   padding: 20px 24px;
   background: #FFFFFF;
-border: 1px solid #EEEEEE;
+  border: 1px solid #EEEEEE;
 }
 
 /*----END PORTFOLIO----*/
