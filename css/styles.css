@@ -7,6 +7,9 @@
 body {
   font-family: var(--main-font);
   font-family: "Roboto", "Raleway", sans-serif;
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1,
@@ -45,7 +48,7 @@ p {
 }
 
 .container {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   align-items: center;
   padding: 0 15px;
@@ -61,13 +64,22 @@ p {
   display: block;
 }
 
+.icon {
+  display: inline-block;
+}
+
+.icon:hover,
+.icon:focus {
+  fill: var(--main-color);
+}
+
 /*-----END COMPONENTS-----*/
 
 /*------HEADER-------*/
 
 .header .container {
   display: flex;
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
 .logo-link {
@@ -79,7 +91,7 @@ p {
 }
 
 .contact-header {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .navigation-list-item:not(:last-child) {
@@ -107,6 +119,8 @@ p {
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: #757575;
+  display: inline-flex;
+  align-items: center;
 }
 
 .header a {
@@ -120,11 +134,28 @@ p {
 .contact-header:focus,
 .logo-link:focus {
   color: var(--main-color);
+  fill: var(--main-color);
+}
+
+.icon-envelope,
+.icon-smartphone {
+  margin-right: 10px;
+  fill: #757575;
 }
 
 /*-------END HEADER-----*/
 
 /*------HERO------*/
+
+.background-img {
+  background-image: url("../images/hero/hero-background.jpg");
+  background-color: rgba(47, 48, 58, 0.4);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  box-shadow: inset 50px 50px 50px 50px rgb(47 48 58 / 40%),
+    inset 1600px 600px 50px 50px rgb(47 48 58 / 40%);
+}
 
 .hero {
   text-align: center;
@@ -162,6 +193,17 @@ p {
 /*------END HERO------*/
 
 /*----ABOUT----*/
+
+.box-icon {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
 
 .about-list {
   display: flex;
@@ -210,6 +252,25 @@ p {
 
 /*----OUR TEAM----*/
 
+.social-media {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-media-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 16px;
+  fill: #afb1b8;
+}
+
 .team {
   display: flex;
   gap: 30px;
@@ -245,7 +306,94 @@ p {
 
 /*----END OUR TEAM----*/
 
+/*-----OUR CLIENTS-----*/
+
+.clients-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding-top: 50px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.clients-box {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+
+.clients-box:hover {
+  border: 1px solid #2196f3;
+}
+
+.box-link:hover,
+.box-link:focus {
+  color: var(--main-color);
+}
+
+.icon-clients {
+  fill: #afb1b8;
+}
+
+/*-----END OUR CLIENTS-----*/
+
 /*----FOOTER----*/
+
+.social-media-footer {
+  width: 206px;
+  height: 80px;
+  margin-bottom: 35px;
+}
+
+.footer-description {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.div-footer {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.footer-icon {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.footer-icon-box {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon-box:hover {
+  background: var(--main-color);
+}
+
+.icon-sm {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
 
 .footer {
   padding-top: 60px;
@@ -286,6 +434,14 @@ p {
 .contact-footer-link:hover,
 .contact-footer-link:focus {
   color: var(--main-color);
+}
+
+.address-footer {
+  padding-top: 20px;
+}
+
+.contact-footer {
+  padding-top: 9px;
 }
 
 /*----END FOOTER----*/
@@ -351,8 +507,19 @@ p {
 
 .portfolio-signature {
   padding: 20px 24px;
-  background: #FFFFFF;
-  border: 1px solid #EEEEEE;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+}
+
+.portfolio-img {
+  background: var(--FFF);
+  border: 1px solid #eeeeee;
+}
+
+.portfolio-img:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 /*----END PORTFOLIO----*/
